@@ -83,6 +83,8 @@ form input, form button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .todoContainer .todoList .todo .todoItem {
@@ -112,8 +114,14 @@ form input, form button {
   background: #33ac4e;
 }
 
-.todoContainer .todoList .todo .completed {
+.todoContainer .todoList .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.todoContainer .todoList .fall {
+  -webkit-transform: translateY(8rem) rotateZ(-20deg);
+          transform: translateY(8rem) rotateZ(-20deg);
+  opacity: 0;
 }
 /*# sourceMappingURL=index.css.map */

@@ -41,13 +41,18 @@ function deleteCheck (event) {
     const item = event.target;
     // Delete todo
     if(item.classList[0] === 'binButton'){
-        item.remove();
+        const todo = item.parentElement;
+        //Delete animation
+        todo.classList.add('fall');
+        todo.addEventListener('transitionend', function(){
+            todo.remove();
+        });
     }
 
     // Check mark 
     if(item.classList[0] === "completeButton"){
         const todo = item.parentElement; 
-        todo.classList.toggle('completed');
+        todo.classList.toggle("completed");
     }
 }
 
